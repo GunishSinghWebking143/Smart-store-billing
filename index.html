@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Store Billing & Sales Tracker</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">SS</div>
+        <div>
+          <div class="eyebrow">SMART STORE</div>
+          <h1>Billing & Sales Tracker</h1>
+          <p class="muted">Simple checkout management</p>
+        </div>
+      </div>
+      <a class="link-button" href="/report">View sales report</a>
+    </header>
+
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">STORE COUNTER</p>
+        <h2>Create a new bill</h2>
+        <p class="muted">Enter quantities for the products purchased by this customer.</p>
+      </div>
+      <div class="pill">C-powered billing</div>
+    </section>
+
+    <form class="panel" action="/bill" method="post">
+      <div class="panel-heading">
+        <div><h2>Product list</h2><p class="muted">Leave quantity as 0 for products not purchased.</p></div>
+        <span class="count">5 products</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code</th><th>Product</th><th>Price</th><th>Quantity</th></tr></thead>
+          <tbody>
+            <tr><td><span class="code">01</span></td><td class="product">Rice</td><td>₹60 / kg</td><td><input type="number" name="qty1" min="0" max="999" value="0"></td></tr>
+            <tr><td><span class="code">02</span></td><td class="product">Wheat</td><td>₹45 / kg</td><td><input type="number" name="qty2" min="0" max="999" value="0"></td></tr>
+            <tr><td><span class="code">03</span></td><td class="product">Sugar</td><td>₹50 / kg</td><td><input type="number" name="qty3" min="0" max="999" value="0"></td></tr>
+            <tr><td><span class="code">04</span></td><td class="product">Milk</td><td>₹30 / litre</td><td><input type="number" name="qty4" min="0" max="999" value="0"></td></tr>
+            <tr><td><span class="code">05</span></td><td class="product">Cooking oil</td><td>₹150 / litre</td><td><input type="number" name="qty5" min="0" max="999" value="0"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="discount-note">
+        <div class="discount-icon">%</div>
+        <div><strong>Automatic discount</strong><p>Above ₹1,000: 10% off &nbsp; · &nbsp; Above ₹5,000: 20% off</p></div>
+      </div>
+
+      <div class="form-footer">
+        <p class="muted">The C program calculates the subtotal, discount and final amount.</p>
+        <button type="submit">Generate bill <span>→</span></button>
+      </div>
+    </form>
+
+    <footer>Smart Store Billing and Sales Tracker · BCA 1st Semester C project</footer>
+  </main>
+</body>
+</html>
